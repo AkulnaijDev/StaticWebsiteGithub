@@ -23,11 +23,11 @@ $(document).ready(function () {
 
     $('#buttonTestApi').click(function () {
         var obj ={
-            "Id":"2",
-            "Type":"type3"
+            "Id":"5",
+            "Type":"dasito"
           }
         $.ajax({
-            url: 'https://iq6ivd2ol6.execute-api.eu-central-1.amazonaws.com/default/testWritingLambda',
+            url: 'https://oihoxpwc65.execute-api.eu-central-1.amazonaws.com/items',
             type: 'POST',
             data: JSON.stringify(obj),
             dataType: 'json',
