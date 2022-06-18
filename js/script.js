@@ -6,18 +6,40 @@ $(document).ready(function () {
     //   });
 
     var url = 'https://www.googleapis.com/books/v1/volumes?q=harry+potter&maxResults=9'
+
+    // $('#buttonTestApi').click(function () {
+    //     $.getJSON(url, function (data) {
+    //         $('#content').empty();
+    //         $.each(data.items, function (entryIndex, entry) {
+    //             var html = '<div class="result">';
+    //             html += '<h3>' + entry.id + '</h3>';
+    //             html += '<div class="title">' + entry.volumeInfo.title + '</div>';
+    //             html += '<div class="author">' + entry.volumeInfo.authors + '</div>';
+    //             $('#content').append(html);
+    //         });
+    //     });
+    //     return false;
+    // });
+
     $('#buttonTestApi').click(function () {
-        $.getJSON(url, function (data) {
-            $('#content').empty();
-            $.each(data.items, function (entryIndex, entry) {
-                var html = '<div class="result">';
-                html += '<h3>' + entry.id + '</h3>';
-                html += '<div class="title">' + entry.volumeInfo.title + '</div>';
-                html += '<div class="author">' + entry.volumeInfo.authors + '</div>';
-                $('#content').append(html);
-            });
+        var obj ={
+            "Id":"2",
+            "Type":"type3"
+          }
+        $.ajax({
+            url: 'https://iq6ivd2ol6.execute-api.eu-central-1.amazonaws.com/default/testWritingLambda',
+            type: 'POST',
+            data: JSON.stringify(obj),
+            dataType: 'json',
+            crossDomain: true,
+            success: function(data) {
+                alert(JSON.stringify(data));
+            },
+            error: function(e) {
+                alert("failed" + JSON.stringify(e));
+            }
         });
-        return false;
     });
+   
 
 });
