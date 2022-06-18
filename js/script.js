@@ -28,7 +28,7 @@ $(document).ready(function () {
           }
         $.ajax({
             url: 'https://oihoxpwc65.execute-api.eu-central-1.amazonaws.com/items',
-            type: 'POST',
+            type: 'PUT',
             data: JSON.stringify(obj),
             dataType: 'json',
             crossDomain: true,
