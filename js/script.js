@@ -33,10 +33,10 @@ $(document).ready(function () {
             dataType: 'json',
             crossDomain: true,
             success: function(data) {
-                alert(JSON.stringify(data));
+                console.log("Lambda calling successful: " + JSON.stringify(data));
             },
             error: function(e) {
-                alert("failed" + JSON.stringify(e));
+                console.log("Lambda calling failed: " + JSON.stringify(e));
             }
         });
     });
