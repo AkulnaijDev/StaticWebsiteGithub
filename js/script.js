@@ -31,6 +31,9 @@ $(document).ready(function () {
             type: 'PUT',
             data: JSON.stringify(obj),
             dataType: 'json',
+            xhrFields: {
+                withCredentials: true
+             },
             crossDomain: true,
             success: function(data) {
                 console.log("Lambda calling successful: " + JSON.stringify(data));
