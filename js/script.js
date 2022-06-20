@@ -42,7 +42,7 @@ $(document).ready(function () {
                 console.log("Lambda calling failed: " + JSON.stringify(e));
             }
             ,beforeSend: function (xhr) {
-                xhr.setRequestHeader('Access-Control-Request-Headers', "Origin,Cookie,X-Requested-With, Content-Type, Accept, Authorization");
+                xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
             }
         });
     });
