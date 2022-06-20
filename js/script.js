@@ -23,11 +23,11 @@ $(document).ready(function () {
 
     $('#buttonTestApi').click(function () {
         var obj ={
-            "Id":"5",
-            "Type":"dasito"
+            "Id":"69420",
+            "Type":"tipo londra da github"
           }
         $.ajax({
-            url: 'https://oihoxpwc65.execute-api.eu-central-1.amazonaws.com/items',
+            url: 'https://nb40xctxpl.execute-api.eu-west-2.amazonaws.com/items',
             type: 'PUT',
             data: JSON.stringify(obj),
             dataType: 'json',
