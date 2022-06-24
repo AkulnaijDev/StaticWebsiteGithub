@@ -27,7 +27,7 @@ $(document).ready(function () {
             "Type":"tipo londra da github"
           }
         $.ajax({
-            url: 'https://nb40xctxpl.execute-api.eu-west-2.amazonaws.com/items',
+            url: 'https://6agt3j9fv8.execute-api.eu-west-2.amazonaws.com/dev/items',
             type: 'PUT',
             data: JSON.stringify(obj),
             dataType: 'json',
@@ -45,6 +45,32 @@ $(document).ready(function () {
                 xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
             }
         });
+
+        //GET ALL ITEMS
+        // $.ajax({
+        //     url: 'https://6agt3j9fv8.execute-api.eu-west-2.amazonaws.com/dev/items',
+        //     type: 'GET',
+
+        //     success: function (data) {
+        //         console.log(JSON.stringify(data));
+        //     },
+        //     error: function (e) {
+        //         console.log(data);
+        //     }
+        // });
+
+        //GET SPECIFIC ITEMS
+        // $.ajax({
+        //     url: 'https://6agt3j9fv8.execute-api.eu-west-2.amazonaws.com/dev/items/ILNUMERODELL'IDCHEVUOI',
+        //     type: 'GET',
+
+        //     success: function (data) {
+        //         console.log(JSON.stringify(data));
+        //     },
+        //     error: function (e) {
+        //         console.log(data);
+        //     }
+        // });
     });
    
 
